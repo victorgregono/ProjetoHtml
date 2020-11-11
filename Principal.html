@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <title>Contato</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+      <style>
+         /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+         .row.content {height: 1500px}
+         /* Set gray background color and 100% height */
+         .sidenav {
+         background-color: #f1f1f1;
+         height: 100%;
+         }
+         /* Set black background color, white text and some padding */
+         footer {
+         background-color: #555;
+         color: white;
+         padding: 15px;
+         }
+         /* On small screens, set height to 'auto' for sidenav and grid */
+         @media screen and (max-width: 767px) {
+         .sidenav {
+         height: auto;
+         padding: 15px;
+         }
+         .row.content {height: auto;} 
+         }
+      </style>
+      <script>
+         function loadintoIframe(iframeid, url){
+          document.getElementById(iframeid).src=url;
+          
+		  document.getElementById("myDiv").setAttribute("hidden","");
+		  
+		  return false;
+         }
+         
+         window.onload=function() {
+           
+		   document.getElementById("myDiv").removeAttribute("hidden");
+		   
+				var passed = location.search;
+				if (passed) loadintoIframe('myframe',unescape(location.search.split('=')[1]));
+			
+         }
+      </script>
+   </head>
+   <body>
+      <div class="container-fluid">
+         <div class="row content">
+            <div class="col-sm-3 sidenav">
+               <h4>Café 3 Corações</h4>
+               <ul class="nav nav-pills nav-stacked">
+                  <li class="active"><a href="" onClick=window.onload>Index</a></li>
+                  <li><a href="Sobre.html" onClick="return loadintoIframe('myframe',this.href)">Sobre</a></li>
+                  <li><a href="contato.html" onClick="return loadintoIframe('myframe',this.href)">Contato</a></li>
+               </ul>
+               <br>
+               
+			   <img src="imagem-cafe.jpg" class="img-rounded" alt="Cinque Terre" width='350px' height='500px'>
+			   
+			   <!--<div class="input-group">
+                  <input type="text" class="form-control" placeholder="Search Blog..">
+                  <span class="input-group-btn">
+                  <button class="btn btn-default" type="button">
+                  <span class="glyphicon glyphicon-search"></span>
+                  </button>
+                  </span>
+               </div>-->
+            </div>
+            <div class="col-sm-9">
+               <h4><small>RECENT POSTS</small></h4>
+               <h5><span class="glyphicon glyphicon-time"></span> Postado por Victor Grego, Nov 11, 2020.
+			   
+			   <!--<p><script> document.write(new Date().toLocaleDateString()); </script></p>-->
+			   
+			   </h5>
+               <!--<h5><span class="label label-success">Lorem</span></h5><br>-->
+               <h5> <img src="logo-footer-3coracoes.png" class="img-rounded" alt="Cinque Terre"> </h5>
+               <br>
+               <hr>
+               <div id="section2" class="tab-pane fade in active">
+				  <!--------------------  iFrame code begin ----------------------------->
+                  <!--<iframe id="myframe" src="" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" vspace="0" hspace="0" style="overflow:visible; height:1500%; width:100%; border:0px; position:relative; left:-20px;"></iframe>-->
+                  <div id="myDiv">
+					 <h1><u><p>Bons motivos para um café com a família: laços e ações fraternas</p></u></h1>
+					 <p></p>
+					 
+					 <p id="teste" style="border:none" height="1500" width="100%">
+					 Café! Ser convidado para um café sempre nos alegra. É sinal de um bom papo, de conversa “jogada fora”, de descontração.
+
+Por que um cafezinho pode provocar estes momentos?
+
+Primeiro, porque é um sinal de honra e gratificação pela visita recebida, sinal de que a alegria estará presente na conversa.
+
+Segundo, além desta honra, a amizade e a cumplicidade faz deste momento simples, algo marcante em nossa vida.
+
+Terceiro, é momento de acalentar a alma. Poucas coisas são tão valorosas como a descontração, como o desligamento das pressões do dia a dia para dar tempo à razão de viver.
+					 </p>
+				  </div>
+				  <iframe id="myframe" src="" style="border:none" height="1500" width="100%"></iframe>
+				  
+               </div>
+            </div>
+         </div>
+      </div>
+      </div>
+      <footer class="container-fluid">
+         <p>Footer Text</p>
+      </footer>
+   </body>
+</html>
